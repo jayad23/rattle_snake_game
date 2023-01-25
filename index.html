@@ -4,51 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./icon.jpeg" />
+    <link rel="icon" type="image/x-icon" href="./icon.png" />
     <title>Rattle Snake Game</title>
-    <style>
-      body {
-        min-height: 100vh;
-        min-width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        position: relative;
-      }
-      #root {
-        background-color: rgba(210, 208, 208, 0.853);
-        width: 100vmin;
-        height: 100vmin;
-        display: grid;
-        grid-template-rows: repeat(21, 1fr);
-        grid-template-columns: repeat(21, 1fr);
-      }
-
-      .snake {
-        background-color: hsl(200, 100%, 20%);
-        border: 0.25vmin solid white;
-      }
-
-      .food {
-        background-color: hsl(50, 100%, 40%);
-        border: 0.25vmin solid black;
-      }
-
-      #author {
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding-left: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
     <script src="game.js" defer type="module"></script>
   </head>
   <body>
-    <p id="author">Made by Kike Vanegas</p>
+    <form class="form-container">
+      <div>
+        <img src="/snake_1.png" alt="snake_icon" />
+        <p id="author">Made by Kike Vanegas</p>
+      </div>
+      <i>Only suitable for desktop</i>
+      <section class="selector-container">
+        <label for="speed">Choose a speed rate:</label>
+        <select name="speed" id="speed">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </section>
+      <button type="submit">Start</button>
+    </form>
     <div id="root"></div>
   </body>
 </html>
